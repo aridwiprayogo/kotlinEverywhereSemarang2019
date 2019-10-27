@@ -43,11 +43,11 @@ Kotlin + [SQLite](https://sqlite.org/index.html) + Android + [Anko](https://gith
 
 ## TODO list
 
-[] Create data and write it into SQLite.
-[] Read or parse database data.
-[] - Test using log
-[] - Serve data into recyclerView.
-[] Update data.
-[] Delete data.
+[ ] Create data and write it into SQLite.
+[ ] Read or parse database data.
+[ ] - Test using log
+[ ] - Serve data into recyclerView.
+[ ] Update data.
+[ ] Delete data.
 
 Pull Request(PRs) are welcome.

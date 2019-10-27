@@ -33,10 +33,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Save"
-        app:layout_constraintBottom_toTopOf="@+id/main_btn_refresh"
+        app:layout_constraintBottom_toTopOf="@+id/main_btn_update"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_edt_address" />
+
+	<Button
+        android:id="@+id/main_btn_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Update"
+        app:layout_constraintBottom_toTopOf="@+id/main_btn_refresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_btn_save" />
 
 
     <Button

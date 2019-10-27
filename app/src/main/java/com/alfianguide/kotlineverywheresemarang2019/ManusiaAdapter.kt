@@ -7,7 +7,12 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.card_manusia.view.*
 
-class ManusiaAdapter(val listManusia: List<ManusiaContract>, val onclick: (ManusiaContract)->Unit)
+interface onClick {
+    fun showToast(manusiaContract: ManusiaContract)
+    fun update(manusiaContract: ManusiaContract)
+}
+
+class ManusiaAdapter(val listManusia: List<ManusiaContract>, val onclick: onClick)
     :RecyclerView.Adapter<ManusiaAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,12 +28,12 @@ class ManusiaAdapter(val listManusia: List<ManusiaContract>, val onclick: (Manus
     }
 
     class ViewHolder(val view: View) : RecyclerView.ViewHolder(view){
-        fun onBind(manusiaContract: ManusiaContract, onclick: (ManusiaContract) -> Unit){
+        fun onBind(manusiaContract: ManusiaContract, onclick: onClick){
             val a = with(view){
                 tv_nama.text = manusiaContract.nama
                 tv_alamat.text = manusiaContract.address
                 this.setOnClickListener {
-                    onclick(manusiaContract)
+                    onclick.showToast(manusiaContract)
                 }
             }
         }
